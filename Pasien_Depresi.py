@@ -13,6 +13,7 @@ WorkPressure = st.number_input ('Input nilai Work Pressure/Tekanan Kerja')
 
 JobSatisfaction = st.number_input ('Input nilai Job Satisfaction/Kepuasan Kerja')
 
+st.caption('cukup input 0=Ya 1=Tidak') 
 Haveyoueverhadsuicidalthoughts = st.number_input ('Input nilai Have you ever had suicidal thoughts?/Pernahkah Anda memiliki pikiran untuk bunuh diri?')
 
 WorkHours = st.number_input ('Input nilai Work Hours/Jam Kerja')
