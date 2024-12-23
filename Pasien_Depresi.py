@@ -5,20 +5,19 @@ depresi = pickle.load(open('depresi_model.sav', 'rb'))
 
 st.logo('depresi.png')
 st.title('Data Mining Prediksi Depresi')
-st.caption('Input angka 1-10')
 
-Age = st.number_input ('Input nilai Age/Umur')
+Age = st.slider ("Input nilai Age/Umur",0,100)
 
-WorkPressure = st.number_input ('Input nilai Work Pressure/Tekanan Kerja')
+WorkPressure = st.slider ("Input nilai Work Pressure/Tekanan Kerja",0,10)
 
-JobSatisfaction = st.number_input ('Input nilai Job Satisfaction/Kepuasan Kerja')
+JobSatisfaction = st.slider ("Input nilai Job Satisfaction/Kepuasan Kerja",0,10)
 
-st.caption('cukup input 0 = Ya 1 = Tidak') 
-Haveyoueverhadsuicidalthoughts = st.number_input ('Input nilai Have you ever had suicidal thoughts?/Pernahkah Anda memiliki pikiran untuk bunuh diri?')
+st.caption('0 = Ya Jika 1 = Tidak')
+Haveyoueverhadsuicidalthoughts = st.slider ("Input nilai Have you ever had suicidal thoughts?/Pernahkah Anda memiliki pikiran untuk bunuh diri?",0,1)
 
-WorkHours = st.number_input ('Input nilai Work Hours/Jam Kerja')
+WorkHours = st.slider ("Input nilai Work Hours/Jam Kerja",0,10)
 
-FinancialStress = st.number_input ('Input nilai Financial Stress/Tekanan Keuangan')
+FinancialStress = st.slider ("Input nilai Financial Stress/Tekanan Keuangan",0,10)
 
 dep_diagnosis = ''
   
@@ -31,3 +30,4 @@ if st.button('Test Prediksi Depresi'):
         dep_diagnosis = 'Tidak depresi'
 
     st.success(dep_diagnosis) 
+    st.balloons() 
